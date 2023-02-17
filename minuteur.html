@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Couteau Suisse | Minuteur</title>
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="navbar-text">
+                <a href="/">Couteau Suisse</a>
+            </div>
+        </div>
+        <form class="minuteur" name="minuteur">
+            <input class="minuteur-display" id="minuteur-display" name="minudisplay" type="text" disabled="true" value="00:00"><br>
+            <input class="minuteur-input" id="minuteur-input-minutes" name="minuinputmin" type="number" min="0" max="60" value="5"><span id="separator">:</span>
+            <input class="minuteur-input" id="minuteur-input-secondes" names="minuinputsec" type="number" min="0" max="60" value="0"><br>
+            <input class="minuteur-button" name="minustart" type="button" value="Démarrer" onclick="hminu()">  
+        </form>
+        <script>
+            function hminu() {
+                departMinutes = parseInt(document.getElementById("minuteur-input-minutes").value)
+                departSecondes = parseInt(document.getElementById("minuteur-input-secondes").value)
+
+                let temps = 0
+                temps = departMinutes * 60 + departSecondes
+
+                const minuDisplay = document.getElementById("minuteur-display")
+
+                minuinterval = setInterval(() => {
+                    let minutes = parseInt(temps / 60)
+                    let secondes = parseInt(temps % 60)
+
+                    minutes = minutes < 10 ? "0" + minutes : minutes
+                    secondes = secondes < 10 ? "0" + secondes : secondes
+
+                    minuDisplay.value = `${minutes}:${secondes}`
+                    temps = temps <= 0 ? 0 : temps - 1
+                }, 1000)
+            }
+        </script>
+    </body>
+</html>

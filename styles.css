@@ -1,0 +1,247 @@
+
+/* Style général */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #171717;
+    color: ivory;
+    margin: 0;
+}
+
+body a {
+    text-decoration: none;
+    font-weight: bold;
+    color: green;
+}
+
+.navbar {
+    width: 100%;
+    top: 0;
+    background-color: black;
+    height: 75px;
+    font-size: 20px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar > div {
+    margin: 25px;
+}
+
+.navbar-text a {
+    color: white;
+}
+
+.navbar-text a:hover {
+    opacity: 80%;
+}
+
+/* Page d'accueil */
+
+.main {
+    padding-top: 75px;
+    margin-top: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.outils {
+    display: flex;
+    background-color: #171717;
+    justify-content: center;
+}
+
+.outils > div {
+    background-color: ivory;
+    color: #171717;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+
+}
+
+.outils > div a {
+    text-decoration: none;
+    color: #171717;
+}
+
+@media only screen and (max-width: 800px) {
+    .outils {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .outils > div {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Horloge */
+
+.horloge {
+    padding-top: 17%;
+    width: 100%;
+    font-family: "Courier New";
+}
+
+.horloge input {
+    padding: 0;
+    width: 100%;
+    font-size: 1500%;
+    text-align: center;
+    background-color: #171717;
+    border: none;
+    color: ivory;
+}
+
+@media only screen and (max-width: 1000px) {
+    .horloge input {
+        padding-top: 50%;
+        font-size: 75px;
+    }
+}
+
+/* Calculatrice */
+
+.calculatrice-container {
+    text-align: center;
+    width: 100%;
+    padding-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+#output {
+    border-radius: 5px;
+    border: none;
+    font-size: 40px;
+    padding: 50px 0px;
+}
+
+#c button{
+    height: 100%;
+    padding: 100% 0%;
+}
+
+.calculatrice td button {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    font-size: 40px;
+    border-radius: 5px;
+    border: none;
+}
+
+.calculatrice td button:focus {
+    opacity: 0.8;
+}
+
+@media only screen and (max-width: 800px) {
+   .calculatrice {
+	width: 100%;
+    }
+
+    #output {
+	padding: 25px 0px;
+	font-size: 40px;
+	width: 100%;
+	height: 102px;
+    }
+
+    .calculatrice td button {
+        font-size: 40px;
+	padding: auto 15px;
+    }
+}
+
+/* Chronomètre */
+
+.chronometre {
+   padding-top: 150px;
+   width: 100%;
+   text-align: center;
+}
+
+.chronometre-display {
+    font-size: 90px;
+    background-color: #171717;
+    color: ivory;
+    border: none;
+    text-align: center;
+}
+
+.chronometre-button {
+    padding: 25px;
+    margin: 20px;
+    font-size: 25px;
+    background-color: ivory;
+    color: #171717;
+    border-radius: 50px;
+}
+
+.chronometre-button:focus {
+   opacity: 0.8;
+}
+
+@media only screen and (max-width: 800px) {
+    .chronometre-display {
+	font-size: 70px;
+	width: 90%;
+    }
+}
+
+/* Minuteur */
+
+.minuteur {
+    padding-top: 150px;
+    width: 100%;
+    text-align: center;
+}
+
+.minuteur-display {
+    background-color: #171717;
+    color: ivory;
+    border: none;
+    text-align: center;
+    font-size: 90px;
+    padding: 25px 0px;
+}
+
+.minuteur-button {
+    padding: 25px;
+    margin: 20px;
+    font-size: 25px;
+    background-color: ivory;
+    color: #171717;
+    border-radius: 50px;
+}
+
+.minuteur-button:focus {
+   opacity: 0.8;
+}
+
+.minuteur-input {
+    font-size: 40px;
+    border: none;
+    text-align: center;
+    width: 80px;
+    background-color: #171717;
+    color: ivory;
+}
+
+#separator {
+    font-size: 40px;
+}
+
+@media only screen and (max-width: 800px) {
+    .minuteur-display {
+	width: 100%;
+	font-size: 70px;
+    }
+}
