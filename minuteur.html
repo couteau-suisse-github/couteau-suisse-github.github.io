@@ -16,10 +16,10 @@
             <input class="minuteur-display" id="minuteur-display" name="minudisplay" type="text" disabled="true" value="00:00"><br>
             <input class="minuteur-input" id="minuteur-input-minutes" name="minuinputmin" type="number" min="0" max="60" value="5"><span id="separator">:</span>
             <input class="minuteur-input" id="minuteur-input-secondes" names="minuinputsec" type="number" min="0" max="60" value="0"><br>
-            <input class="minuteur-button" name="minustart" type="button" value="Démarrer" onclick="hminu()">  
+            <input class="minuteur-button" name="minustart" type="button" value="Démarrer" onclick="minu()">  
         </form>
         <script>
-            function hminu() {
+            function minu() {
                 departMinutes = parseInt(document.getElementById("minuteur-input-minutes").value)
                 departSecondes = parseInt(document.getElementById("minuteur-input-secondes").value)
 
