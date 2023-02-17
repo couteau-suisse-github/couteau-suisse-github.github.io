@@ -46,32 +46,32 @@
       	</div>	
       	<script>
         	// Lorsque il y a un appui sur la touche entrée, clique sur le bouton "="
-         	var ouput = document.getElementById("ouput");
+         	var ouput = document.getElementById("ouput"); // "Raccourci" de document.getElementById("output") vers "output"
 
-         	output.addEventListener("keypress", function(event) {
-         		if (event.key === "Enter") {
-            		event.preventDefault();
-            		document.getElementById("calcbutton").click();
+         	output.addEventListener("keypress", function(event) { // fonction se répétant dans "output" et cherchant des évènements "keypress" : appui sur un clavier
+         		if (event.key === "Enter") { // Si la touche appuyé est Entrée
+            		document.getElementById("calcbutton").click(); // Simule un clic utilisateur sur le boutton "="
          		}
          	}); 
 
 		 	// Appelé lors de l'appui sur la touche "="
         	// Évalue le chiffre et renvoie la sortie : eval() est une fonction magique : elle comprend toute seule à partir d'une chaîne de caractères quel(s) calcul(s) effectuer
          	function calculer() { 
-            	let a = document.getElementById("output").value 
-            	let b = eval(a) 
-            	document.getElementById("output").value = b 
+            	let a = document.getElementById("output").value // Prend le contenu de l'output
+            	let b = eval(a) // Détermine automatiquement le(s) calcul(s) à faire à partir de la chaîne de caractères (ex: b = eval("5+5/3") --> b = 5 + 5 / 3
+            	document.getElementById("output").value = b // Modifie le contenu de l'output par le résultat du calcul (ou des calculs)
          	} 
 
+			// Appelé lors de l'appui d'un bouton comme '1', '+' ou encore '7'
          	// Affiche la valeur (ajoute la valeur)
          	function afficher(val) { 
-            	document.getElementById("output").value+=val 
+            	document.getElementById("output").value+=val // Rajoute la touche appuyé à l'output
          	}
  
 		 	// Appelé lors de l'appui sur la touche "C"
          	// Efface l'output (remplace par une valeur vide) 
          	function effacer() { 
-            	document.getElementById("output").value = "" 
+            	document.getElementById("output").value = "" // Remplace l'ouput par "", soit une chaîne de caractère vide
          	} 
       	</script>
    	</body> 
