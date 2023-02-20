@@ -41,7 +41,7 @@
         	heure = (hour > 9 ? hour :"0" + hour); // Si l'heure est inférieur à 9, alors on ajoute un 0 (ex : 05)
         	heure += ":" + (min > 9 ? min :"0" + min); // De même pour les minutes
         	heure += ":" + (sec > 9 ? sec :"0" + sec); // Et les secondes
-        	document.Clock.Horloge.value = heure; // On change l'input contenant l'heure à la nouvelle valeur
+        	document.Clock.Horloge.value = heure; // On change l'output contenant l'heure à la nouvelle valeur
         	timerID = setTimeout("showtime()",1000); // On actualise toutes les secondes
         	timerActif = true; // On déclare le timer comme actif
       	}
