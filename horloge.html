@@ -38,7 +38,7 @@
         	var hour = now.getHours(); // On prend les heures
         	var min = now.getMinutes(); // Les minutes
         	var sec = now.getSeconds(); // Et les secondes
-        	heure = (hour > 9 ? hour :"0" + hour); // Si l'heure est inférieur à 9, alors on ajoute un 0 (ex : 05)
+        	heure = (hour > 9 ? hour :"0" + hour); // Si l'heure est inférieure à 9, alors on ajoute un 0 (ex : 05)
         	heure += ":" + (min > 9 ? min :"0" + min); // De même pour les minutes
         	heure += ":" + (sec > 9 ? sec :"0" + sec); // Et les secondes
         	document.Clock.Horloge.value = heure; // On change l'output contenant l'heure à la nouvelle valeur
