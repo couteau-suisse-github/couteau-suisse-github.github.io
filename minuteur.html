@@ -20,6 +20,8 @@
         </form>
         <script>
             function minu() {
+                clearTimeout(minuDisplay)
+                
                 departMinutes = parseInt(document.getElementById("minuteur-input-minutes").value)
                 departSecondes = parseInt(document.getElementById("minuteur-input-secondes").value)
 
